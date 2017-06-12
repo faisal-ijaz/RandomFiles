@@ -13,14 +13,7 @@ export default class SPPeoplePicker extends React.Component<ISPPeoplePickerProps
         this._onFilterChanged = this._onFilterChanged.bind(this); // https://github.com/goatslacker/alt/issues/283
         this._onStateChange = this._onStateChange.bind(this);
         this.state = {};
-        if (typeof (_spPageContextInfo) !== 'undefined') {
-            this.state.pageContext = _spPageContextInfo;
-        } else {
-            this.state.pageContext = {
-                siteServerRelativeUrl: '',
-                serverRequestPath: window.location.href
-            };
-        }
+        this.state.pageContext = _spPageContextInfo;
     }
 
     public componentDidMount(): void {
